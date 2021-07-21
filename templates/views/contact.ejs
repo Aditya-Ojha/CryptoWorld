@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
+</head>
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Blooger</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items" id="navList">
+                    <li class="nav-link">
+                        <a href="index">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about">About Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="services">Service</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="privacy">Privacy Policy</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contact">Contact Us</a>
+                        <span id="loged" class=<%=name%>></span>
+                    </li>
+                    <li class="nav-link">
+                        <!-- <a href="signup">Login/Register</a> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"></a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"></a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+                <a href="#"></a><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <section id="mainContent">
+        <div class="contactContainer">
+            <div class="contactForm">
+                <div class="contactFormChild">
+                <h2>Contact Us</h2>
+                <form  id="formSubmission" onsubmit="return validation()">
+                    <div class="formElements">
+                        <div class="child1"><label for="fname" >First name</label></div>
+                        <div class="child2">
+                            <i class="fa fa-big fa-user-circle-o" aria-hidden="true"></i>
+                            <input type="text" id="fname" placeholder="First Name" name="fname"/>
+                        </div>
+                    </div>
+                    <span id="userfname" class="warning"></span>
+                    
+                    <div class="formElements">
+                        <div class="child1"><label for="lname">Last name</label></div>
+                        <div class="child2">
+                            <i class="fa  fa-big fa-user-circle-o" aria-hidden="true"></i>
+                            <input type="text" id="lname" placeholder="Last Name" name="lname"/>
+                        </div>
+                    </div>
+                    <span id="userlname" class="warning"></span>
+                    
+                    <div class="formElements">
+                        <div class="child1"><label for="phone">Phone No.</label></div>
+                        <div class="child2">
+                            <i class="fa  fa-big fa-phone" aria-hidden="true"></i>
+                            <input type="text" id="phone" placeholder="Contact Number" name="phone"/>
+                        </div>
+                    </div>
+                    <span id="phNumber" class="warning"></span>    
+                    
+                    <div class="formElements">
+                        <div class="child1"><label for="email">Email</label></div>
+                        <div class="child2">
+                            <i class="fa  fa-big fa-envelope" aria-hidden="true"></i>
+                            <input type="text" id="email" placeholder="Email Id" name="email"/>
+                        </div>
+                    </div>
+                    <span id="emailId" class="warning"></span>
+                    
+                    <div class="formElements">
+                        <div class="child1"><label for="message">Message</label></div>
+                        <div class="child2">
+                            <i class="fa  fa-big fa-pencil" aria-hidden="true"></i>
+                            <textarea name="message" id="message" cols="20" rows="2" placeholder="Write us"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="formElements btnSubmitParent">
+                        <input class = "btnSubmit" type="submit" value="Submit">
+                    </div>
+                  </form>
+                </div>
+            </div>
+            <div class="contactSidebar">
+                <div class="category">
+                    <h2>Category</h2>
+                    <ul class="category-list">
+                        <li class="list-items">
+                        <!-- <li class="list-items" data-aos="fade-left" data-aos-delay="100"> -->
+                            <a href="#">Stablecoins</a>
+                            <span>(67)</span>
+                        </li>
+                        <li class="list-items">
+                        <!-- <li class="list-items" data-aos="fade-left" data-aos-delay="200"> -->
+                            <a href="#">Exchange-based Tokens</a>
+                            <span>(225)</span>
+                        </li>
+                        <li class="list-items">
+                        <!-- <li class="list-items" data-aos="fade-left" data-aos-delay="300"> -->
+                            <a href="#">Decentralized Finance (DeFi)</a>
+                            <span>(336)</span>
+                        </li>
+                        <li class="list-items">
+                        <!-- <li class="list-items" data-aos="fade-left" data-aos-delay="400"> -->
+                            <a href="#">Binance Smart Chain Ecosystem</a>
+                            <span>(147)</span>
+                        </li>
+                        <li class="list-items">
+                        <!-- <li class="list-items" data-aos="fade-left" data-aos-delay="500"> -->
+                            <a href="#">Centralized Exchange Token (CEX)</a>
+                            <span>(55)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <form class="form-element" id="subDone">
+                        <input type="text" class="input-element" placeholder="Email" name="email" id="email" required>
+                        <button class="btn form-btn" onclick="subscribe()">Subscribe</button>
+                    </form>
+                </div>
+                <div class="popular-tags">
+                    <h2>Popular Tags</h2>
+                    <div class="tags flex-row">
+                        <!-- <span class="tag" data-aos="flip-up" data-aos-delay="100">crypto</span>
+                        <span class="tag" data-aos="flip-up" data-aos-delay="200">bitcoin</span>
+                        <span class="tag" data-aos="flip-up" data-aos-delay="300">cryptocurrency</span>
+                        <span class="tag" data-aos="flip-up" data-aos-delay="400">blockchain</span>
+                        <span class="tag" data-aos="flip-up" data-aos-delay="500">ethereum</span>
+                        <span class="tag" data-aos="flip-up" data-aos-delay="600">btc</span>
+                        <span class="tag" data-aos="flip-up" data-aos-delay="700">money</span>
+                        <span class="tag" data-aos="flip-up" data-aos-delay="800">forex</span> -->
+                        <span class="tag">crypto</span>
+                        <span class="tag">bitcoin</span>
+                        <span class="tag">cryptocurrency</span>
+                        <span class="tag">blockchain</span>
+                        <span class="tag">ethereum</span>
+                        <span class="tag">btc</span>
+                        <span class="tag">money</span>
+                        <span class="tag">forex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" >
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                    iure, autem nulla tenetur repellendus.</p>
+            </div>
+            <div class="newsletter" >
+                <h2>Newsletter</h2>
+                <p>Stay update with our latest</p>
+                <form class="form-element" method="POST" action="subscribe">
+                    <input type="text" class="input-element" placeholder="Email" name="email" id="email" required>
+                    <button class="btn form-btn">Subscribe</button>
+                </form>
+            </div>
+            <div class="instagram" >
+                <h2>Instagram</h2>
+                <div class="flex-row">
+                    <!-- <img src="./assets/instagram/thumb-card3.png" alt="insta1"> -->
+                    <!-- <img src="./assets/instagram/thumb-card3.png" alt="insta1"> -->
+                    <!-- <img src="./assets/instagram/thumb-card4.png" alt="insta2"> -->
+                    <img src="./assets/instagram/insta1.jpg" alt="insta3">
+                    <img src="./assets/instagram/insta2.jpg" alt="insta3">
+                    <img src="./assets/instagram/insta3.jpg" alt="insta3">
+                </div>
+                <div class="flex-row">
+                    <!-- <img src="./assets/instagram/thumb-card6.png" alt="insta4"> -->
+                    <!-- <img src="./assets/instagram/thumb-card7.png" alt="insta5"> -->
+                    <!-- <img src="./assets/instagram/thumb-card8.png" alt="insta6"> -->
+                    <img src="./assets/instagram/insta4.jpg" alt="insta6">
+                </div>
+            </div>
+            <div class="follow" >
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <a href="#"></a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"></a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+                    <a href="#"></a><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fa fa-chevron-circle-up fa-2x" aria-hidden="true"></i></span>
+        </div>
+    </footer>
+    <!-- --------footer------------- -->
+
+    <!-- <script src="js/main.js"></script> -->
+
+    <script type="text/javascript">
+    //subscribe-------
+        function subscribe() {
+            document.getElementById('subDone').method = "POST";
+            document.getElementById('subDone').action = "subscribe";
+
+        }
+
+        // signin -------------login-------
+            const el = document.getElementById('loged');
+            const list = document.getElementById('navList');
+            let items = list.childNodes;
+            let i;
+            for (i = 0, size = items.length - 1; i < size - 1; i++) {
+            }
+            if (el.className === "sign") {
+                items[i].innerHTML = "<a href='signup'>Signin/Login</a>";
+            } else {
+                items[i].innerHTML = "👤<%=user%> <span class='logged' onclick='logout()' style='padding:12px'><a href='#' style='color:black' >Logout</a></span>"
+                items[i].classList.add('updatedParent');
+            }
+
+            function logout() {
+                items[i].innerHTML = "<a href='signup'>Signin/Login</a>";
+                items[i].classList.remove('updatedParent');
+            }
+
+
+        function validation(){
+          var fname = document.getElementById('fname').value;
+          var lname = document.getElementById('lname').value;
+          var email = document.getElementById('email').value;
+          var phone = document.getElementById('phone').value;
+
+
+          if(fname == ""){
+            document.getElementById('userfname').innerHTML=" * Please fill your first name";
+            // alert(" * Enter your name")
+            return false;
+          }
+          if(fname.length<3||fname.length>20){
+            document.getElementById('userfname').innerHTML=" * Name length should be between 3 to 20";
+            // alert(" * Name length should be between 3 to 20")
+            return false;
+          }
+          if(!isNaN(fname)){
+            document.getElementById('userfname').innerHTML=" * Name cannot be a number";
+            // alert(" * Name cannot be a number");
+            return false;
+          }
+          if(document.getElementById('userfname').innerHTML.length>0){
+            document.getElementById('userfname').innerHTML="";
+          }
+
+          if(lname == ""){
+            document.getElementById('userlname').innerHTML=" * Please fill your last name";
+            // alert("Enter your last name");
+            return false;
+          }
+          if(lname.length<3||lname.length>20){
+            document.getElementById('userlname').innerHTML=" * Name length should be between 3 to 20";
+            // alert("Name length should be between 3 to 20")
+            return false;
+          }
+          if(!isNaN(lname)){
+            document.getElementById('userlname').innerHTML=" * Name cannot be a number";
+            // alert(" * Name cannot be a number");
+            return false;
+          }
+          if(document.getElementById('userlname').innerHTML.length>0){
+            document.getElementById('userlname').innerHTML="";
+          }
+
+
+          
+          
+          if(phone == ""){
+              document.getElementById('phNumber').innerHTML=" * Enter your contact number";
+              // alert(" * Enter your contact number");
+              return false;
+            }
+          if(isNaN(phone)){
+              document.getElementById('phNumber').innerHTML=" * Please enter valid number";
+              // alert(" * Please enter valid number");
+              return false;
+            }
+            if(phone.length!=10){
+                document.getElementById('phNumber').innerHTML=" * Please enter valid number";
+                // alert(" * Please enter valid number");
+                return false;
+            }
+            if(document.getElementById('phNumber').innerHTML.length>0){
+                document.getElementById('phNumber').innerHTML="";
+            }
+            
+            if(email == ""){
+              document.getElementById('emailId').innerHTML=" * Please fill your email id";
+              // alert(" * Please fill your email id");
+              return false;
+            }
+            if(email.indexOf('@')<=0){
+              document.getElementById('emailId').innerHTML=" * Enter valid email id";
+              // alert(" * Enter valid email id");
+              return false;
+            }
+            if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+              document.getElementById('emailId').innerHTML=" * Please enter valid domain like .com or .in";
+              // alert(" * Please enter valid domain (eg: '.com' or '.in'");
+              return false;
+            }
+            if(document.getElementById('emailId').innerHTML.length>0){
+              document.getElementById('emailId').innerHTML="";
+            }
+
+        //If all cases pass then it will submit result in database with method POST and action /add
+        alert("Form Submitted Successfully☻");
+        
+        document.getElementById('formSubmission').method="POST";
+        document.getElementById('formSubmission').action="/add";
+
+        }
+
+
+    </script>
+
+</body>
+</html>

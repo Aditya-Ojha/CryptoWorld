@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp/Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/register.css">
+  <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- {{!-- ***NAVBAR********* --}} -->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="index" class="text-gray">Crypto World</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items" id="navList">
+                    <li class="nav-link">
+                        <a href="index">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about">About Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="services">Service</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="privacy">Privacy Policy</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contact">Contact Us</a>
+                        <span id="loged" class=<%=name%>></span>
+                    </li>
+                    <li class="nav-link">
+                        <!-- <a href="signup">Login/Register</a> -->
+                    </li>
+                </ul>
+            </div>
+            <!-- {{!-- <div class="social text-gray">
+                <a href="#"></a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"></a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+                <a href="#"></a><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            </div> --}} -->
+        </div>
+    </nav>
+    <!-- {{!-- ***NAVBAR********* --}} -->
+
+    <div class="signupContainer">
+        <div class="cont">
+            <div class="form sign-in">
+            <h2>Sign In</h2>
+            <form method="POST" action="/login">
+                <label>
+                    <span>Email Address</span>
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password" required>
+                </label>
+                <div class="input">
+                    <input class="submit" type="submit" value="Sign In">
+                </div>
+            </form>
+            <p class="forgot-pass">Forgot Password ?</p>
+
+            <div class="social-media">
+                <ul>
+                <li><img src="../assets/images/facebook.png"></li>
+                <li><img src="../assets/images/twitter.png"></li>
+                <li><img src="../assets/images/linkedin.png"></li>
+                <li><img src="../assets/images/instagram.png"></li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="sub-cont">
+            <div class="img">
+                <div class="img-text m-up">
+                <h2>Hi there</h2>
+                <p class="statement">Sign up and get all latest updates on crypto</p>
+                </div>
+                <div class="img-text m-in">
+                <h2>One of us?</h2>
+                <p class="statement">If you already has an account, just sign in. We've missed you!</p>
+                </div>
+                <div class="img-btn">
+                <span class="m-up">Sign Up</span>
+                <span class="m-in">Sign In</span>
+                </div>
+            </div>
+            <form id="formSubmission" method="POST" action="/store">
+                <div class="form sign-up">
+                    <h2>Sign Up</h2>
+                    <label>
+                    <span>Name</span>
+                    <input type="text" id="name" name="name" autocomplete="off" required>
+                    </label>
+                    <label>
+                    <span>Email</span>
+                    <input type="email" id="email" name="email"autocomplete="off" required>
+                    </label>
+                    <label>
+                    <span>Password</span>
+                    <input type="password" id="pass" name="password" required>
+                    </label>
+                    <label>
+                    <span>Confirm Password</span>
+                    <input type="password" id="confirm" name="confirmpass" required>
+                    </label>
+                    <div class="input">
+                        <input class="submit" type="submit" value="Sign Up Now">
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+  
+  <!-- {{!-- <script src="../../public/js/main.js"></script> --}} -->
+    <script>
+        document.querySelector('.img-btn').addEventListener('click', function()
+            {
+                document.querySelector('.cont').classList.toggle('s-signup')
+            }
+        );
+
+        // signin -------------login-------
+            const el = document.getElementById('loged');
+            const list = document.getElementById('navList');
+            let items = list.childNodes;
+            let i;
+            for (i = 0, size = items.length - 1; i < size - 1; i++) {
+            }
+            if (el.className === "sign") {
+                items[i].innerHTML = "<a href='signup'>Signin/Login</a>";
+            } else {
+                items[i].innerHTML = "👤<%=user%> <span class='logged' onclick='logout()' style='padding:12px'><a href='#' style='color:black' >Logout</a></span>"
+                items[i].classList.add('updatedParent');
+            }
+
+            function logout() {
+                items[i].innerHTML = "<a href='signup'>Signin/Login</a>";
+                items[i].classList.remove('updatedParent');
+            }
+
+    </script>
+</body>
+</html>
